@@ -6,57 +6,27 @@ comparison:
     number_of_comparison_results: 3
     aggregate_function: avg
 objectives:
-    - sli: kpi_et_ex
+    - sli: traces_cpu_time
       displayName: ""
       pass:
         - criteria:
-            - <=100
+            - <150000
+        - criteria:
+            - <+10%
       warning:
         - criteria:
-            - <=200
-      weight: 2
-      key_sli: true
-    - sli: error_count
-      displayName: ""
-      pass:
-        - criteria:
-            - <4
-      warning:
-        - criteria:
-            - <=7
-      weight: 2
-      key_sli: true
+            - <+20%
+      weight: 1
+      key_sli: false
     - sli: throughput_svc
       displayName: ""
       pass:
         - criteria:
-            - '>5000'
+            - '>6000'
       warning: []
       weight: 1
       key_sli: true
-    - sli: cpu_time
-      displayName: ""
-      pass:
-        - criteria:
-            - <165000
-            - <=+10%
-      warning:
-        - criteria:
-            - <+20%
-      weight: 1
-      key_sli: false
-    - sli: io_time
-      displayName: ""
-      pass:
-        - criteria:
-            - <2500000
-            - <=+10%
-      warning:
-        - criteria:
-            - <+20%
-      weight: 1
-      key_sli: false
-    - sli: lock_time
+    - sli: traces_lock_time
       displayName: ""
       pass:
         - criteria:
@@ -68,49 +38,161 @@ objectives:
             - <+20%
       weight: 1
       key_sli: false
-    - sli: db_calls
+    - sli: traces_with_errors
       displayName: ""
       pass:
         - criteria:
-            - <25000
-            - <=+10%
+            - <10
+      warning:
+        - criteria:
+            - <=15
+      weight: 5
+      key_sli: true
+    - sli: traces_db_calls
+      displayName: ""
+      pass:
+        - criteria:
+            - <27000
+        - criteria:
+            - <+10%
       warning:
         - criteria:
             - <+20%
       weight: 1
       key_sli: false
-    - sli: non_db_calls
+    - sli: traces_inter_tier_calls
       displayName: ""
       pass:
         - criteria:
             - <45000
-            - <=+10%
+        - criteria:
+            - <+10%
       warning:
         - criteria:
             - <+20%
       weight: 1
       key_sli: false
-    - sli: svc_rt_p50
+    - sli: kpi_responsetime_4_-_Random_Search
       displayName: ""
       pass:
         - criteria:
-            - <2
+            - <600
+        - criteria:
+            - <+15%
       warning:
         - criteria:
-            - <3
-      weight: 2
+            - <=1000
+      weight: 1
       key_sli: true
-    - sli: svc_rt_p90
+    - sli: kpi_responsetime_9_-_Finish_Payment
       displayName: ""
       pass:
         - criteria:
-            - <110
+            - <600
+        - criteria:
+            - <+15%
       warning:
         - criteria:
-            - <350
-      weight: 2
+            - <=1000
+      weight: 1
       key_sli: true
-    - sli: svc_rt_p95
+    - sli: kpi_responsetime_2_-_CalculateRecommendations
+      displayName: ""
+      pass:
+        - criteria:
+            - <600
+        - criteria:
+            - <+15%
+      warning:
+        - criteria:
+            - <=1000
+      weight: 1
+      key_sli: true
+    - sli: kpi_responsetime_6_-_Select_Payment
+      displayName: ""
+      pass:
+        - criteria:
+            - <600
+        - criteria:
+            - <+15%
+      warning:
+        - criteria:
+            - <=1000
+      weight: 1
+      key_sli: true
+    - sli: kpi_responsetime_5_-_Select_Journey
+      displayName: ""
+      pass:
+        - criteria:
+            - <600
+        - criteria:
+            - <+15%
+      warning:
+        - criteria:
+            - <=1000
+      weight: 1
+      key_sli: true
+    - sli: kpi_responsetime_3_-_Login
+      displayName: ""
+      pass:
+        - criteria:
+            - <600
+        - criteria:
+            - <+15%
+      warning:
+        - criteria:
+            - <=1000
+      weight: 1
+      key_sli: true
+    - sli: kpi_responsetime_8_-_Submit_Payment
+      displayName: ""
+      pass:
+        - criteria:
+            - <600
+        - criteria:
+            - <+15%
+      warning:
+        - criteria:
+            - <=1000
+      weight: 1
+      key_sli: true
+    - sli: kpi_responsetime_7_-_Mock_Creditcard_Number
+      displayName: ""
+      pass:
+        - criteria:
+            - <600
+        - criteria:
+            - <+15%
+      warning:
+        - criteria:
+            - <=1000
+      weight: 1
+      key_sli: true
+    - sli: kpi_responsetime_1_-_Home_Page
+      displayName: ""
+      pass:
+        - criteria:
+            - <600
+        - criteria:
+            - <+15%
+      warning:
+        - criteria:
+            - <=1000
+      weight: 1
+      key_sli: true
+    - sli: traces_io_time
+      displayName: ""
+      pass:
+        - criteria:
+            - <2700000
+        - criteria:
+            - <+10%
+      warning:
+        - criteria:
+            - <+20%
+      weight: 1
+      key_sli: false
+    - sli: responsetime_p90_backend
       displayName: ""
       pass:
         - criteria:
@@ -120,105 +202,50 @@ objectives:
             - <2000
       weight: 2
       key_sli: true
-    - sli: kpi_rt_4_-_Random_Search
+    - sli: responsetime_p90_frontend
       displayName: ""
       pass:
         - criteria:
-            - <600
-            - <=+15%
+            - <1100
       warning:
         - criteria:
-            - <=1000
-      weight: 1
+            - <1500
+      weight: 2
       key_sli: true
-    - sli: kpi_rt_9_-_Finish_Payment
+    - sli: responsetime_p90_database
       displayName: ""
       pass:
         - criteria:
-            - <600
-            - <=+15%
+            - <1.5
       warning:
         - criteria:
-            - <=1000
-      weight: 1
+            - <2
+      weight: 2
       key_sli: true
-    - sli: kpi_rt_2_-_CalculateRecommendations
+    - sli: process_memory_allocation
       displayName: ""
       pass:
         - criteria:
-            - <600
-            - <=+15%
+            - <15000000
+        - criteria:
+            - <+15%
       warning:
         - criteria:
-            - <=1000
+            - <+25%
       weight: 1
-      key_sli: true
-    - sli: kpi_rt_6_-_Select_Payment
+      key_sli: false
+    - sli: process_cpu_usage
       displayName: ""
       pass:
         - criteria:
-            - <600
-            - <=+15%
+            - <2
+        - criteria:
+            - <+15%
       warning:
         - criteria:
-            - <=1000
+            - <+25%
       weight: 1
-      key_sli: true
-    - sli: kpi_rt_5_-_Select_Journey
-      displayName: ""
-      pass:
-        - criteria:
-            - <600
-            - <=+15%
-      warning:
-        - criteria:
-            - <=1000
-      weight: 1
-      key_sli: true
-    - sli: kpi_rt_3_-_Login
-      displayName: ""
-      pass:
-        - criteria:
-            - <600
-            - <=+15%
-      warning:
-        - criteria:
-            - <=1000
-      weight: 1
-      key_sli: true
-    - sli: kpi_rt_8_-_Submit_Payment
-      displayName: ""
-      pass:
-        - criteria:
-            - <600
-            - <=+15%
-      warning:
-        - criteria:
-            - <=1000
-      weight: 1
-      key_sli: true
-    - sli: kpi_rt_7_-_Mock_Creditcard_Number
-      displayName: ""
-      pass:
-        - criteria:
-            - <600
-            - <=+15%
-      warning:
-        - criteria:
-            - <=1000
-      weight: 1
-      key_sli: true
-    - sli: kpi_rt_1_-_Home_Page
-      displayName: ""
-      pass:
-        - criteria:
-            - <600
-            - <=+15%
-      warning:
-        - criteria:
-            - <=1000
-      weight: 1
-      key_sli: true
+      key_sli: false
 total_score:
     pass: 85%
     warning: 80%
