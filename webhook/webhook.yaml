@@ -1,0 +1,18 @@
+apiVersion: webhookconfig.keptn.sh/v1alpha1
+kind: WebhookConfig
+metadata:
+  name: webhook-configuration
+spec:
+  webhooks:
+    - type: sh.keptn.event.evaluation.finished
+      requests:
+        - >-
+          curl --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'Authorization: {{.env.secret_sro97894apitoken_ApiToken}}' --request POST --data '{  "type": "test",  "series": [    {      "timeseriesId": "custom:releaseevaluationscore",      "dimensions": {        "Score" : {{.data.evaluation.score}},        "Result" : "{{.data.result}}",        "Passed" : 0,        "Releaseversion": "{{.data.labels.Release}}",        "Buildversion": "{{.data.labels.buildId}}",        "Buildnumber":  {{.data.labels.buildnr}},        "Evaluationtime": "{{.time}}",        "Application" : "EasyTravel"              },      "dataPoints" : [[ {{.data.labels.evaltime}}, {{.data.evaluation.score}} ]]                  }  ]}' https://sro97894.live.dynatrace.com/api/v1/entity/infrastructure/custom/custom:releaseevaluationscore
+      envFrom:
+        - name: secret_sro97894apitoken_ApiToken
+          secretRef:
+            name: sro97894-apitoken
+            key: ApiToken
+      subscriptionID: 29813c54-360b-471b-88b5-7368e969b129
+      sendFinished: false
+      sendStarted: false
