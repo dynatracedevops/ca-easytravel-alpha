@@ -1,6 +1,14 @@
 spec_version: 0.1.4
 indicators:
-    kpi_responsetime: ""
+    kpi_responsetime_1_-_Home_Page: MV2;MicroSecond;metricSelector=calc:service.teststepresponsetime:splitBy("Test Step"):avg:names:filter(eq(Test Step,1 - Home Page))
+    kpi_responsetime_2_-_CalculateRecommendations: MV2;MicroSecond;metricSelector=calc:service.teststepresponsetime:splitBy("Test Step"):avg:names:filter(eq(Test Step,2 - CalculateRecommendations))
+    kpi_responsetime_3_-_Login: MV2;MicroSecond;metricSelector=calc:service.teststepresponsetime:splitBy("Test Step"):avg:names:filter(eq(Test Step,3 - Login))
+    kpi_responsetime_4_-_Random_Search: MV2;MicroSecond;metricSelector=calc:service.teststepresponsetime:splitBy("Test Step"):avg:names:filter(eq(Test Step,4 - Random Search))
+    kpi_responsetime_5_-_Select_Journey: MV2;MicroSecond;metricSelector=calc:service.teststepresponsetime:splitBy("Test Step"):avg:names:filter(eq(Test Step,5 - Select Journey))
+    kpi_responsetime_6_-_Select_Payment: MV2;MicroSecond;metricSelector=calc:service.teststepresponsetime:splitBy("Test Step"):avg:names:filter(eq(Test Step,6 - Select Payment))
+    kpi_responsetime_7_-_Mock_Creditcard_Number: MV2;MicroSecond;metricSelector=calc:service.teststepresponsetime:splitBy("Test Step"):avg:names:filter(eq(Test Step,7 - Mock Creditcard Number))
+    kpi_responsetime_8_-_Submit_Payment: MV2;MicroSecond;metricSelector=calc:service.teststepresponsetime:splitBy("Test Step"):avg:names:filter(eq(Test Step,8 - Submit Payment))
+    kpi_responsetime_9_-_Finish_Payment: MV2;MicroSecond;metricSelector=calc:service.teststepresponsetime:splitBy("Test Step"):avg:names:filter(eq(Test Step,9 - Finish Payment))
     process_cpu_usage: entitySelector=type(PROCESS_GROUP_INSTANCE),tag("EasyTravel")&metricSelector=builtin:tech.generic.cpu.usage:splitBy():auto:names
     process_memory_allocation: MV2;Byte;entitySelector=type(PROCESS_GROUP_INSTANCE),tag("EasyTravel")&metricSelector=builtin:tech.jvm.memory.memAllocationBytes:splitBy():auto:names
     responsetime_p90_backend: MV2;MicroSecond;entitySelector=type(SERVICE),tag("EasyTravel:BackEnd")&metricSelector=builtin:service.response.time:splitBy():percentile(90):names
