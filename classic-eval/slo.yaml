@@ -138,7 +138,103 @@ objectives:
       warning: []
       weight: 1
       key_sli: true
-    - sli: kpi_responsetime
+    - sli: kpi_responsetime_9_-_Finish_Payment
+      displayName: ""
+      pass:
+        - criteria:
+            - <600
+        - criteria:
+            - <+15%
+      warning:
+        - criteria:
+            - <=1000
+      weight: 1
+      key_sli: true
+    - sli: kpi_responsetime_4_-_Random_Search
+      displayName: ""
+      pass:
+        - criteria:
+            - <600
+        - criteria:
+            - <+15%
+      warning:
+        - criteria:
+            - <=1000
+      weight: 1
+      key_sli: true
+    - sli: kpi_responsetime_6_-_Select_Payment
+      displayName: ""
+      pass:
+        - criteria:
+            - <600
+        - criteria:
+            - <+15%
+      warning:
+        - criteria:
+            - <=1000
+      weight: 1
+      key_sli: true
+    - sli: kpi_responsetime_2_-_CalculateRecommendations
+      displayName: ""
+      pass:
+        - criteria:
+            - <600
+        - criteria:
+            - <+15%
+      warning:
+        - criteria:
+            - <=1000
+      weight: 1
+      key_sli: true
+    - sli: kpi_responsetime_5_-_Select_Journey
+      displayName: ""
+      pass:
+        - criteria:
+            - <600
+        - criteria:
+            - <+15%
+      warning:
+        - criteria:
+            - <=1000
+      weight: 1
+      key_sli: true
+    - sli: kpi_responsetime_8_-_Submit_Payment
+      displayName: ""
+      pass:
+        - criteria:
+            - <600
+        - criteria:
+            - <+15%
+      warning:
+        - criteria:
+            - <=1000
+      weight: 1
+      key_sli: true
+    - sli: kpi_responsetime_3_-_Login
+      displayName: ""
+      pass:
+        - criteria:
+            - <600
+        - criteria:
+            - <+15%
+      warning:
+        - criteria:
+            - <=1000
+      weight: 1
+      key_sli: true
+    - sli: kpi_responsetime_7_-_Mock_Creditcard_Number
+      displayName: ""
+      pass:
+        - criteria:
+            - <600
+        - criteria:
+            - <+15%
+      warning:
+        - criteria:
+            - <=1000
+      weight: 1
+      key_sli: true
+    - sli: kpi_responsetime_1_-_Home_Page
       displayName: ""
       pass:
         - criteria:
