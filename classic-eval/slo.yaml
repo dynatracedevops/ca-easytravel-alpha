@@ -6,73 +6,7 @@ comparison:
     number_of_comparison_results: 3
     aggregate_function: avg
 objectives:
-    - sli: traces_cpu_time
-      displayName: ""
-      pass:
-        - criteria:
-            - <150000
-        - criteria:
-            - <+10%
-      warning:
-        - criteria:
-            - <+20%
-      weight: 1
-      key_sli: false
-    - sli: throughput_svc
-      displayName: ""
-      pass:
-        - criteria:
-            - '>6000'
-      warning: []
-      weight: 1
-      key_sli: true
-    - sli: traces_lock_time
-      displayName: ""
-      pass:
-        - criteria:
-            - <100
-        - criteria:
-            - <+10%
-      warning:
-        - criteria:
-            - <+20%
-      weight: 1
-      key_sli: false
-    - sli: traces_with_errors
-      displayName: ""
-      pass:
-        - criteria:
-            - <10
-      warning:
-        - criteria:
-            - <=15
-      weight: 5
-      key_sli: true
-    - sli: traces_db_calls
-      displayName: ""
-      pass:
-        - criteria:
-            - <27000
-        - criteria:
-            - <+10%
-      warning:
-        - criteria:
-            - <+20%
-      weight: 1
-      key_sli: false
-    - sli: traces_inter_tier_calls
-      displayName: ""
-      pass:
-        - criteria:
-            - <45000
-        - criteria:
-            - <+10%
-      warning:
-        - criteria:
-            - <+20%
-      weight: 1
-      key_sli: false
-    - sli: kpi_responsetime_4_-_Random_Search
+    - sli: kpi_responsetime_9_-_Finish_Payment
       displayName: ""
       pass:
         - criteria:
@@ -84,7 +18,7 @@ objectives:
             - <=1000
       weight: 1
       key_sli: true
-    - sli: kpi_responsetime_9_-_Finish_Payment
+    - sli: kpi_responsetime_4_-_Random_Search
       displayName: ""
       pass:
         - criteria:
@@ -180,18 +114,6 @@ objectives:
             - <=1000
       weight: 1
       key_sli: true
-    - sli: traces_io_time
-      displayName: ""
-      pass:
-        - criteria:
-            - <2700000
-        - criteria:
-            - <+10%
-      warning:
-        - criteria:
-            - <+20%
-      weight: 1
-      key_sli: false
     - sli: responsetime_p90_backend
       displayName: ""
       pass:
@@ -222,18 +144,6 @@ objectives:
             - <2
       weight: 2
       key_sli: true
-    - sli: process_cpu_usage
-      displayName: ""
-      pass:
-        - criteria:
-            - <2
-        - criteria:
-            - <+15%
-      warning:
-        - criteria:
-            - <+25%
-      weight: 1
-      key_sli: false
     - sli: process_memory_allocation
       displayName: ""
       pass:
@@ -246,6 +156,96 @@ objectives:
             - <+25%
       weight: 1
       key_sli: false
+    - sli: process_cpu_usage
+      displayName: ""
+      pass:
+        - criteria:
+            - <2
+        - criteria:
+            - <+15%
+      warning:
+        - criteria:
+            - <+25%
+      weight: 1
+      key_sli: false
+    - sli: traces_cpu_time
+      displayName: ""
+      pass:
+        - criteria:
+            - <150000
+        - criteria:
+            - <+10%
+      warning:
+        - criteria:
+            - <+20%
+      weight: 1
+      key_sli: false
+    - sli: traces_inter_tier_calls
+      displayName: ""
+      pass:
+        - criteria:
+            - <45000
+        - criteria:
+            - <+10%
+      warning:
+        - criteria:
+            - <+20%
+      weight: 1
+      key_sli: false
+    - sli: traces_lock_time
+      displayName: ""
+      pass:
+        - criteria:
+            - <100
+        - criteria:
+            - <+10%
+      warning:
+        - criteria:
+            - <+20%
+      weight: 1
+      key_sli: false
+    - sli: traces_io_time
+      displayName: ""
+      pass:
+        - criteria:
+            - <2700000
+        - criteria:
+            - <+10%
+      warning:
+        - criteria:
+            - <+20%
+      weight: 1
+      key_sli: false
+    - sli: traces_with_errors
+      displayName: ""
+      pass:
+        - criteria:
+            - <10
+      warning:
+        - criteria:
+            - <=15
+      weight: 5
+      key_sli: true
+    - sli: traces_db_calls
+      displayName: ""
+      pass:
+        - criteria:
+            - <27000
+        - criteria:
+            - <+10%
+      warning:
+        - criteria:
+            - <+20%
+      weight: 1
+      key_sli: false
+    - sli: throughput_svc
+      displayName: ""
+      pass:
+        - criteria:
+            - '>6000'
+      warning: []
+      weight: 1
+      key_sli: true
 total_score:
     pass: 85%
     warning: 80%
