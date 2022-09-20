@@ -1,6 +1,5 @@
 spec_version: 0.1.4
 indicators:
-    kpi_responsetime: ""
     process_cpu_usage: entitySelector=type(PROCESS_GROUP_INSTANCE),tag("EasyTravel")&metricSelector=builtin:tech.generic.cpu.usage:splitBy():auto:names
     process_memory_allocation: MV2;Byte;entitySelector=type(PROCESS_GROUP_INSTANCE),tag("EasyTravel")&metricSelector=builtin:tech.jvm.memory.memAllocationBytes:splitBy():auto:names
     responsetime_p90_backend: MV2;MicroSecond;entitySelector=type(SERVICE),tag("EasyTravel:BackEnd")&metricSelector=builtin:service.response.time:splitBy():percentile(90):names
