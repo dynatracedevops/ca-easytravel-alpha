@@ -72,18 +72,6 @@ objectives:
             - <+20%
       weight: 1
       key_sli: false
-    - sli: kpi_responsetime_9_-_Finish_Payment
-      displayName: ""
-      pass:
-        - criteria:
-            - <600
-        - criteria:
-            - <+15%
-      warning:
-        - criteria:
-            - <=1000
-      weight: 1
-      key_sli: true
     - sli: kpi_responsetime_4_-_Random_Search
       displayName: ""
       pass:
@@ -96,7 +84,7 @@ objectives:
             - <=1000
       weight: 1
       key_sli: true
-    - sli: kpi_responsetime_6_-_Select_Payment
+    - sli: kpi_responsetime_9_-_Finish_Payment
       displayName: ""
       pass:
         - criteria:
@@ -120,6 +108,18 @@ objectives:
             - <=1000
       weight: 1
       key_sli: true
+    - sli: kpi_responsetime_6_-_Select_Payment
+      displayName: ""
+      pass:
+        - criteria:
+            - <600
+        - criteria:
+            - <+15%
+      warning:
+        - criteria:
+            - <=1000
+      weight: 1
+      key_sli: true
     - sli: kpi_responsetime_5_-_Select_Journey
       displayName: ""
       pass:
@@ -132,7 +132,7 @@ objectives:
             - <=1000
       weight: 1
       key_sli: true
-    - sli: kpi_responsetime_8_-_Submit_Payment
+    - sli: kpi_responsetime_3_-_Login
       displayName: ""
       pass:
         - criteria:
@@ -144,7 +144,7 @@ objectives:
             - <=1000
       weight: 1
       key_sli: true
-    - sli: kpi_responsetime_3_-_Login
+    - sli: kpi_responsetime_8_-_Submit_Payment
       displayName: ""
       pass:
         - criteria:
@@ -222,11 +222,11 @@ objectives:
             - <2
       weight: 2
       key_sli: true
-    - sli: process_memory_allocation
+    - sli: process_cpu_usage
       displayName: ""
       pass:
         - criteria:
-            - <15000000
+            - <2
         - criteria:
             - <+15%
       warning:
@@ -234,11 +234,11 @@ objectives:
             - <+25%
       weight: 1
       key_sli: false
-    - sli: process_cpu_usage
+    - sli: process_memory_allocation
       displayName: ""
       pass:
         - criteria:
-            - <2
+            - <15000000
         - criteria:
             - <+15%
       warning:
