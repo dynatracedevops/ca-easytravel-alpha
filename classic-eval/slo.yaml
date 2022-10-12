@@ -138,7 +138,7 @@ objectives:
       warning: []
       weight: 1
       key_sli: true
-    - sli: kpi_responsetime_9_-_Finish_Payment
+    - sli: kpi_responsetime_4_-_Random_Search
       displayName: ""
       pass:
         - criteria:
@@ -150,7 +150,7 @@ objectives:
             - <=1000
       weight: 1
       key_sli: true
-    - sli: kpi_responsetime_4_-_Random_Search
+    - sli: kpi_responsetime_9_-_Finish_Payment
       displayName: ""
       pass:
         - criteria:
@@ -198,7 +198,7 @@ objectives:
             - <=1000
       weight: 1
       key_sli: true
-    - sli: kpi_responsetime_8_-_Submit_Payment
+    - sli: kpi_responsetime_3_-_Login
       displayName: ""
       pass:
         - criteria:
@@ -210,7 +210,7 @@ objectives:
             - <=1000
       weight: 1
       key_sli: true
-    - sli: kpi_responsetime_3_-_Login
+    - sli: kpi_responsetime_8_-_Submit_Payment
       displayName: ""
       pass:
         - criteria:
