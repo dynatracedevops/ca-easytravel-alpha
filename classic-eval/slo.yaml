@@ -174,18 +174,6 @@ objectives:
             - <=1000
       weight: 1
       key_sli: true
-    - sli: kpi_responsetime_2_-_CalculateRecommendations
-      displayName: ""
-      pass:
-        - criteria:
-            - <600
-        - criteria:
-            - <+15%
-      warning:
-        - criteria:
-            - <=1000
-      weight: 1
-      key_sli: true
     - sli: kpi_responsetime_5_-_Select_Journey
       displayName: ""
       pass:
