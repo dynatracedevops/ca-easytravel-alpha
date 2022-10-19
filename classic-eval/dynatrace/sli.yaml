@@ -1,7 +1,6 @@
 spec_version: 0.1.4
 indicators:
     kpi_responsetime_1_-_Home_Page: MV2;MicroSecond;metricSelector=calc:service.teststepresponsetime:splitBy("Test Step"):avg:names:filter(eq(Test Step,1 - Home Page))
-    kpi_responsetime_2_-_CalculateRecommendations: MV2;MicroSecond;metricSelector=calc:service.teststepresponsetime:splitBy("Test Step"):avg:names:filter(eq(Test Step,2 - CalculateRecommendations))
     kpi_responsetime_3_-_Login: MV2;MicroSecond;metricSelector=calc:service.teststepresponsetime:splitBy("Test Step"):avg:names:filter(eq(Test Step,3 - Login))
     kpi_responsetime_4_-_Random_Search: MV2;MicroSecond;metricSelector=calc:service.teststepresponsetime:splitBy("Test Step"):avg:names:filter(eq(Test Step,4 - Random Search))
     kpi_responsetime_5_-_Select_Journey: MV2;MicroSecond;metricSelector=calc:service.teststepresponsetime:splitBy("Test Step"):avg:names:filter(eq(Test Step,5 - Select Journey))
