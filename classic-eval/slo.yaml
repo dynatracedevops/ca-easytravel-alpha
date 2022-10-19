@@ -162,7 +162,7 @@ objectives:
             - <=1000
       weight: 1
       key_sli: true
-    - sli: kpi_responsetime_6_-_Select_Payment
+    - sli: kpi_responsetime_2_-_CalculateRecommendations
       displayName: ""
       pass:
         - criteria:
