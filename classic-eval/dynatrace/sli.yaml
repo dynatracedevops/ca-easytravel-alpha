@@ -5,6 +5,7 @@ indicators:
     kpi_responsetime_3_-_Login: MV2;MicroSecond;metricSelector=calc:service.teststepresponsetime:splitBy("Test Step"):avg:names:filter(eq(Test Step,3 - Login))
     kpi_responsetime_4_-_Random_Search: MV2;MicroSecond;metricSelector=calc:service.teststepresponsetime:splitBy("Test Step"):avg:names:filter(eq(Test Step,4 - Random Search))
     kpi_responsetime_5_-_Select_Journey: MV2;MicroSecond;metricSelector=calc:service.teststepresponsetime:splitBy("Test Step"):avg:names:filter(eq(Test Step,5 - Select Journey))
+    kpi_responsetime_6_-_Select_Payment: MV2;MicroSecond;metricSelector=calc:service.teststepresponsetime:splitBy("Test Step"):avg:names:filter(eq(Test Step,6 - Select Payment))
     kpi_responsetime_7_-_Mock_Creditcard_Number: MV2;MicroSecond;metricSelector=calc:service.teststepresponsetime:splitBy("Test Step"):avg:names:filter(eq(Test Step,7 - Mock Creditcard Number))
     kpi_responsetime_8_-_Submit_Payment: MV2;MicroSecond;metricSelector=calc:service.teststepresponsetime:splitBy("Test Step"):avg:names:filter(eq(Test Step,8 - Submit Payment))
     kpi_responsetime_9_-_Finish_Payment: MV2;MicroSecond;metricSelector=calc:service.teststepresponsetime:splitBy("Test Step"):avg:names:filter(eq(Test Step,9 - Finish Payment))
