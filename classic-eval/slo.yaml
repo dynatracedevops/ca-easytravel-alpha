@@ -180,8 +180,8 @@ objectives:
             - <=1000
       weight: 1
       key_sli: true
-    - sli: kpi_responsetime_5_-_select_journey
-      displayName: ____________Performance Business KPIs Evaluation___________ (5 - Select Journey)
+    - sli: kpi_responsetime_1_-_home_page
+      displayName: ____________Performance Business KPIs Evaluation___________ (1 - Home Page)
       pass:
         - criteria:
             - <600
@@ -192,8 +192,8 @@ objectives:
             - <=1000
       weight: 1
       key_sli: true
-    - sli: kpi_responsetime_1_-_home_page
-      displayName: ____________Performance Business KPIs Evaluation___________ (1 - Home Page)
+    - sli: kpi_responsetime_5_-_select_journey
+      displayName: ____________Performance Business KPIs Evaluation___________ (5 - Select Journey)
       pass:
         - criteria:
             - <600
