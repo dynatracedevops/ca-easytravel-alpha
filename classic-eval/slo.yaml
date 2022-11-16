@@ -144,6 +144,18 @@ objectives:
       warning: []
       weight: 1
       key_sli: false
+    - sli: kpi_responsetime_3_-_login
+      displayName: ____________Performance Business KPIs Evaluation___________ (3 - Login)
+      pass:
+        - criteria:
+            - <600
+        - criteria:
+            - <+15%
+      warning:
+        - criteria:
+            - <=1000
+      weight: 1
+      key_sli: true
     - sli: kpi_responsetime_4_-_random_search
       displayName: ____________Performance Business KPIs Evaluation___________ (4 - Random Search)
       pass:
@@ -158,18 +170,6 @@ objectives:
       key_sli: true
     - sli: kpi_responsetime_2_-_calculaterecommendations
       displayName: ____________Performance Business KPIs Evaluation___________ (2 - CalculateRecommendations)
-      pass:
-        - criteria:
-            - <600
-        - criteria:
-            - <+15%
-      warning:
-        - criteria:
-            - <=1000
-      weight: 1
-      key_sli: true
-    - sli: kpi_responsetime_3_-_login
-      displayName: ____________Performance Business KPIs Evaluation___________ (3 - Login)
       pass:
         - criteria:
             - <600
