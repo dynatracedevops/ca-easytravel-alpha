@@ -204,8 +204,8 @@ objectives:
             - <=1000
       weight: 1
       key_sli: true
-    - sli: kpi_responsetime_8_-_submit_payment
-      displayName: ____________Performance Business KPIs Evaluation___________ (8 - Submit Payment)
+    - sli: kpi_responsetime_7_-_mock_creditcard_number
+      displayName: ____________Performance Business KPIs Evaluation___________ (7 - Mock Creditcard Number)
       pass:
         - criteria:
             - <600
@@ -216,8 +216,8 @@ objectives:
             - <=1000
       weight: 1
       key_sli: true
-    - sli: kpi_responsetime_7_-_mock_creditcard_number
-      displayName: ____________Performance Business KPIs Evaluation___________ (7 - Mock Creditcard Number)
+    - sli: kpi_responsetime_8_-_submit_payment
+      displayName: ____________Performance Business KPIs Evaluation___________ (8 - Submit Payment)
       pass:
         - criteria:
             - <600
