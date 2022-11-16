@@ -7,7 +7,7 @@ comparison:
     aggregate_function: avg
 objectives:
     - sli: responsetime_p90_backend
-      displayName: ""
+      displayName: . . . . Backend services 90p . . . .
       pass:
         - criteria:
             - <1100
@@ -17,7 +17,7 @@ objectives:
       weight: 2
       key_sli: true
     - sli: responsetime_p90_frontend
-      displayName: ""
+      displayName: . . . . FrontEnd services 90p . . . .
       pass:
         - criteria:
             - <1100
@@ -27,7 +27,7 @@ objectives:
       weight: 2
       key_sli: true
     - sli: responsetime_p90_database
-      displayName: ""
+      displayName: . . . . .Database services 90p. . . .
       pass:
         - criteria:
             - <1.5
@@ -37,7 +37,7 @@ objectives:
       weight: 2
       key_sli: true
     - sli: process_memory_allocation
-      displayName: ""
+      displayName: __Process Memory Allocation___________
       pass:
         - criteria:
             - <15000000
@@ -49,7 +49,7 @@ objectives:
       weight: 1
       key_sli: false
     - sli: process_cpu_usage
-      displayName: ""
+      displayName: __________Process CPU Usage________________________________________
       pass:
         - criteria:
             - <2
@@ -61,7 +61,7 @@ objectives:
       weight: 1
       key_sli: false
     - sli: traces_cpu_time
-      displayName: ""
+      displayName: ____ Traces CPU time (sum) __________
       pass:
         - criteria:
             - <150000
@@ -73,7 +73,7 @@ objectives:
       weight: 1
       key_sli: false
     - sli: traces_inter_tier_calls
-      displayName: ""
+      displayName: _____________ Inter-Tier Calls __________________
       pass:
         - criteria:
             - <45000
@@ -85,7 +85,7 @@ objectives:
       weight: 1
       key_sli: false
     - sli: traces_lock_time
-      displayName: ""
+      displayName: _____ Traces Lock time (sum)____
       pass:
         - criteria:
             - <100
@@ -97,7 +97,7 @@ objectives:
       weight: 1
       key_sli: false
     - sli: traces_io_time
-      displayName: ""
+      displayName: ____ Traces IO time (sum)____
       pass:
         - criteria:
             - <2700000
@@ -109,7 +109,7 @@ objectives:
       weight: 1
       key_sli: false
     - sli: traces_with_errors
-      displayName: ""
+      displayName: _________Failures (sum)__________
       pass:
         - criteria:
             - <10
@@ -119,7 +119,7 @@ objectives:
       weight: 5
       key_sli: true
     - sli: traces_db_calls
-      displayName: ""
+      displayName: _________ Database Calls _________
       pass:
         - criteria:
             - <27000
@@ -131,15 +131,21 @@ objectives:
       weight: 1
       key_sli: false
     - sli: throughput_svc
-      displayName: ""
+      displayName: Throughput (sum)_________
       pass:
         - criteria:
             - '>6000'
       warning: []
       weight: 1
       key_sli: true
-    - sli: kpi_responsetime_4_-_Random_Search
-      displayName: ""
+    - sli: 'evaluation_result_for_release:'
+      displayName: 'Evaluation Result for release:'
+      pass: []
+      warning: []
+      weight: 1
+      key_sli: false
+    - sli: kpi_responsetime_4_-_random_search
+      displayName: ____________Performance Business KPIs Evaluation___________ (4 - Random Search)
       pass:
         - criteria:
             - <600
@@ -150,8 +156,8 @@ objectives:
             - <=1000
       weight: 1
       key_sli: true
-    - sli: kpi_responsetime_9_-_Finish_Payment
-      displayName: ""
+    - sli: kpi_responsetime_2_-_calculaterecommendations
+      displayName: ____________Performance Business KPIs Evaluation___________ (2 - CalculateRecommendations)
       pass:
         - criteria:
             - <600
@@ -162,8 +168,8 @@ objectives:
             - <=1000
       weight: 1
       key_sli: true
-    - sli: kpi_responsetime_2_-_CalculateRecommendations
-      displayName: ""
+    - sli: kpi_responsetime_3_-_login
+      displayName: ____________Performance Business KPIs Evaluation___________ (3 - Login)
       pass:
         - criteria:
             - <600
@@ -174,8 +180,8 @@ objectives:
             - <=1000
       weight: 1
       key_sli: true
-    - sli: kpi_responsetime_6_-_Select_Payment
-      displayName: ""
+    - sli: kpi_responsetime_1_-_home_page
+      displayName: ____________Performance Business KPIs Evaluation___________ (1 - Home Page)
       pass:
         - criteria:
             - <600
@@ -186,8 +192,8 @@ objectives:
             - <=1000
       weight: 1
       key_sli: true
-    - sli: kpi_responsetime_5_-_Select_Journey
-      displayName: ""
+    - sli: kpi_responsetime_5_-_select_journey
+      displayName: ____________Performance Business KPIs Evaluation___________ (5 - Select Journey)
       pass:
         - criteria:
             - <600
@@ -198,8 +204,8 @@ objectives:
             - <=1000
       weight: 1
       key_sli: true
-    - sli: kpi_responsetime_3_-_Login
-      displayName: ""
+    - sli: kpi_responsetime_8_-_submit_payment
+      displayName: ____________Performance Business KPIs Evaluation___________ (8 - Submit Payment)
       pass:
         - criteria:
             - <600
@@ -210,8 +216,8 @@ objectives:
             - <=1000
       weight: 1
       key_sli: true
-    - sli: kpi_responsetime_8_-_Submit_Payment
-      displayName: ""
+    - sli: kpi_responsetime_7_-_mock_creditcard_number
+      displayName: ____________Performance Business KPIs Evaluation___________ (7 - Mock Creditcard Number)
       pass:
         - criteria:
             - <600
@@ -222,8 +228,8 @@ objectives:
             - <=1000
       weight: 1
       key_sli: true
-    - sli: kpi_responsetime_7_-_Mock_Creditcard_Number
-      displayName: ""
+    - sli: kpi_responsetime_9_-_finish_payment
+      displayName: ____________Performance Business KPIs Evaluation___________ (9 - Finish Payment)
       pass:
         - criteria:
             - <600
@@ -234,8 +240,8 @@ objectives:
             - <=1000
       weight: 1
       key_sli: true
-    - sli: kpi_responsetime_1_-_Home_Page
-      displayName: ""
+    - sli: kpi_responsetime_6_-_select_payment
+      displayName: ____________Performance Business KPIs Evaluation___________ (6 - Select Payment)
       pass:
         - criteria:
             - <600
