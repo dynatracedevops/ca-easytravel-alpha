@@ -144,18 +144,6 @@ objectives:
       warning: []
       weight: 1
       key_sli: false
-    - sli: kpi_responsetime_3_-_login
-      displayName: ____________Performance Business KPIs Evaluation___________ (3 - Login)
-      pass:
-        - criteria:
-            - <600
-        - criteria:
-            - <+15%
-      warning:
-        - criteria:
-            - <=1000
-      weight: 1
-      key_sli: true
     - sli: kpi_responsetime_4_-_random_search
       displayName: ____________Performance Business KPIs Evaluation___________ (4 - Random Search)
       pass:
@@ -170,6 +158,18 @@ objectives:
       key_sli: true
     - sli: kpi_responsetime_2_-_calculaterecommendations
       displayName: ____________Performance Business KPIs Evaluation___________ (2 - CalculateRecommendations)
+      pass:
+        - criteria:
+            - <600
+        - criteria:
+            - <+15%
+      warning:
+        - criteria:
+            - <=1000
+      weight: 1
+      key_sli: true
+    - sli: kpi_responsetime_3_-_login
+      displayName: ____________Performance Business KPIs Evaluation___________ (3 - Login)
       pass:
         - criteria:
             - <600
@@ -228,8 +228,8 @@ objectives:
             - <=1000
       weight: 1
       key_sli: true
-    - sli: kpi_responsetime_6_-_select_payment
-      displayName: ____________Performance Business KPIs Evaluation___________ (6 - Select Payment)
+    - sli: kpi_responsetime_9_-_finish_payment
+      displayName: ____________Performance Business KPIs Evaluation___________ (9 - Finish Payment)
       pass:
         - criteria:
             - <600
@@ -240,8 +240,8 @@ objectives:
             - <=1000
       weight: 1
       key_sli: true
-    - sli: kpi_responsetime_9_-_finish_payment
-      displayName: ____________Performance Business KPIs Evaluation___________ (9 - Finish Payment)
+    - sli: kpi_responsetime_6_-_select_payment
+      displayName: ____________Performance Business KPIs Evaluation___________ (6 - Select Payment)
       pass:
         - criteria:
             - <600
