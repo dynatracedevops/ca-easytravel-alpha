@@ -144,6 +144,18 @@ objectives:
       warning: []
       weight: 1
       key_sli: false
+    - sli: kpi_responsetime_3_-_login
+      displayName: ____________Performance Business KPIs Evaluation___________ (3 - Login)
+      pass:
+        - criteria:
+            - <600
+        - criteria:
+            - <+15%
+      warning:
+        - criteria:
+            - <=1000
+      weight: 1
+      key_sli: true
     - sli: kpi_responsetime_4_-_random_search
       displayName: ____________Performance Business KPIs Evaluation___________ (4 - Random Search)
       pass:
@@ -168,8 +180,8 @@ objectives:
             - <=1000
       weight: 1
       key_sli: true
-    - sli: kpi_responsetime_3_-_login
-      displayName: ____________Performance Business KPIs Evaluation___________ (3 - Login)
+    - sli: kpi_responsetime_1_-_home_page
+      displayName: ____________Performance Business KPIs Evaluation___________ (1 - Home Page)
       pass:
         - criteria:
             - <600
@@ -192,8 +204,8 @@ objectives:
             - <=1000
       weight: 1
       key_sli: true
-    - sli: kpi_responsetime_1_-_home_page
-      displayName: ____________Performance Business KPIs Evaluation___________ (1 - Home Page)
+    - sli: kpi_responsetime_9_-_finish_payment
+      displayName: ____________Performance Business KPIs Evaluation___________ (9 - Finish Payment)
       pass:
         - criteria:
             - <600
@@ -206,18 +218,6 @@ objectives:
       key_sli: true
     - sli: kpi_responsetime_8_-_submit_payment
       displayName: ____________Performance Business KPIs Evaluation___________ (8 - Submit Payment)
-      pass:
-        - criteria:
-            - <600
-        - criteria:
-            - <+15%
-      warning:
-        - criteria:
-            - <=1000
-      weight: 1
-      key_sli: true
-    - sli: kpi_responsetime_9_-_finish_payment
-      displayName: ____________Performance Business KPIs Evaluation___________ (9 - Finish Payment)
       pass:
         - criteria:
             - <600
